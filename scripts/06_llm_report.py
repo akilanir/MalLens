@@ -12,20 +12,20 @@ import sys
 from pathlib import Path
 from loguru import logger
 
-from droidlens.config import Config
-from droidlens.ingest.runner import build_class_graph
-from droidlens.features.vectorize import extract_features
-from droidlens.clustering.expand import rank_clusters
-from droidlens.llm.analyze import analyze_clusters_sys
-from droidlens.report.aggregate import aggregate as rule_aggregate
-from droidlens.utils.cache import ArtifactCache, sha256_of_file
-from droidlens.utils.logsetup import setup_logging
+from mallens.config import Config
+from mallens.ingest.runner import build_class_graph
+from mallens.features.vectorize import extract_features
+from mallens.clustering.expand import rank_clusters
+from mallens.llm.analyze import analyze_clusters_sys
+from mallens.report.aggregate import aggregate as rule_aggregate
+from mallens.utils.cache import ArtifactCache, sha256_of_file
+from mallens.utils.logsetup import setup_logging
 
-from droidlens.report.llm_aggregate import llm_aggregate
-from droidlens.core.datatypes import LLMAggregateVerdict
+from mallens.report.llm_aggregate import llm_aggregate
+from mallens.core.datatypes import LLMAggregateVerdict
 
-from droidlens.llm.client import LLMClient
-from droidlens.llm.openai_client import OpenAIClient
+from mallens.llm.client import LLMClient
+from mallens.llm.openai_client import OpenAIClient
 
 
 def write_reports(apk: str, sha: str, av: LLMAggregateVerdict, out_dir: str) -> str:

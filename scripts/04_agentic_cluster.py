@@ -39,14 +39,14 @@ import sys
 from pathlib import Path
 from loguru import logger
 
-from droidlens.config import Config
-from droidlens.ingest.runner import build_class_graph
-from droidlens.features.vectorize import extract_features
-from droidlens.clustering.expand import rank_clusters
-from droidlens.utils.cache import (ArtifactCache, sha256_of_file,)
-from droidlens.utils.logsetup import setup_logging
-from droidlens.agentic.ollama_client import (OllamaClient,)
-from droidlens.agentic.cluster_agent import (GraphGuidedClusterAgent,)
+from mallens.config import Config
+from mallens.ingest.runner import build_class_graph
+from mallens.features.vectorize import extract_features
+from mallens.clustering.expand import rank_clusters
+from mallens.utils.cache import (ArtifactCache, sha256_of_file,)
+from mallens.utils.logsetup import setup_logging
+from mallens.agentic.ollama_client import (OllamaClient,)
+from mallens.agentic.cluster_agent import (GraphGuidedClusterAgent,)
 
 
 def save_cluster_results(output_dir: Path, apk_sha: str, results: list,):

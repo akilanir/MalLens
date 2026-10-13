@@ -5,12 +5,12 @@ Usage: python scripts/02_extract_features.py --config configs/default.yaml app.a
 import argparse
 import sys
 
-from droidlens.config import Config
-from droidlens.core.exceptions import IngestError
-from droidlens.ingest.runner import build_class_graph
-from droidlens.features.vectorize import extract_features
-from droidlens.utils.cache import ArtifactCache, sha256_of_file
-from droidlens.utils.logsetup import setup_logging
+from mallens.config import Config
+from mallens.core.exceptions import IngestError
+from mallens.ingest.runner import build_class_graph
+from mallens.features.vectorize import extract_features
+from mallens.utils.cache import ArtifactCache, sha256_of_file
+from mallens.utils.logsetup import setup_logging
 
 STAGE = "stage2_ap_features"
 

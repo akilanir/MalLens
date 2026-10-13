@@ -1,15 +1,9 @@
 paths:
-  # cache_dir: "/srv/akila/droidlens/.droidlens3_cache"
-  # cache_dir: "/srv/akila/droidlens/.droidlens3_cache2"
-  # cache_dir: "/srv/akila/droidlens/.droidlens3_cache_malradar3"
-  cache_dir: "/srv/akila/droidlens/.droidlens3_cache_aggObfLarge"
-  # cache_dir: "/srv/akila/droidlens/.droidlens3_cache_conceptDrift"
-  # cache_dir: "/srv/akila/droidlens/.droidlens3_cache_lamd2"
-  cache_dir_decomp: "/srv/akila/droidlens/.droidlens_cache_decomp"
-  jadx_binary: "/mnt/sdrive/akila/jadx/bin/jadx"            # used in stage 2
-  log_file: "global_logfiles/pipeline_aggObfLarge.log"
-  # log_file: "global_logfiles/pipeline_conceptDrift.log"
-  apktool_binary: "apktool"
+  cache_dir: ".mallens_cache_aggObfLarge"
+  cache_dir_decomp: "/srv/akila/mallens/.mallens_cache_decomp"
+  jadx_binary: "jadx" # PLEASE CHANGE THE JADX BIN DIR HERE
+  log_file: "global_logfiles/pipeline.log"
+  apktool_binary: "apktool" #PLEASE CHANGE THE JADX BIN DIR HERE
 
 ingest:
   timeout_seconds: 600            # kill Androguard child process after this

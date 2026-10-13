@@ -6,13 +6,13 @@ import argparse
 import sys
 from loguru import logger
 
-from droidlens.config import Config
-from droidlens.ingest.runner import build_class_graph
-from droidlens.features.vectorize import extract_features
-from droidlens.clustering.expand import rank_clusters
-from droidlens.llm.analyze import analyze_clusters, summarize_clusters
-from droidlens.utils.cache import ArtifactCache, sha256_of_file
-from droidlens.utils.logsetup import setup_logging
+from mallens.config import Config
+from mallens.ingest.runner import build_class_graph
+from mallens.features.vectorize import extract_features
+from mallens.clustering.expand import rank_clusters
+from mallens.llm.analyze import analyze_clusters, summarize_clusters
+from mallens.utils.cache import ArtifactCache, sha256_of_file
+from mallens.utils.logsetup import setup_logging
 
 
 def main() -> int:

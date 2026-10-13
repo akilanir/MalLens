@@ -6,10 +6,10 @@ import argparse
 import sys
 from collections import Counter
 
-from droidlens.config import Config
-from droidlens.core.exceptions import IngestError
-from droidlens.ingest.runner import build_class_graph
-from droidlens.utils.logsetup import setup_logging
+from mallens.config import Config
+from mallens.core.exceptions import IngestError
+from mallens.ingest.runner import build_class_graph
+from mallens.utils.logsetup import setup_logging
 
 
 def main() -> int:

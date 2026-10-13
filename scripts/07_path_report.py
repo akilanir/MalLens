@@ -23,25 +23,25 @@ import sys
 from pathlib import Path
 from loguru import logger
 
-from droidlens.config import Config
-from droidlens.ingest.runner import build_class_graph
-from droidlens.features.vectorize import extract_features
-from droidlens.clustering.expand import rank_clusters
-from droidlens.llm.client import LLMClient
-from droidlens.llm.factsheet import (build_factsheet, feats_dict,FS_PROMPT_VERSION)
-from droidlens.llm.pack import get_class_source
-from droidlens.llm.fscache import FactSheetCache, src_hash
-from droidlens.llm.pathfind import enumerate_paths
-from droidlens.llm.adjudicate import adjudicate_path, render_path
-from droidlens.llm.analyze import cluster_permission_lines
-from droidlens.report.pathverdict import cluster_verdict, apk_verdict
-from droidlens.core.datatypes import ApkPathVerdict
-from droidlens.utils.cache import ArtifactCache, sha256_of_file
-from droidlens.utils.logsetup import setup_logging
+from mallens.config import Config
+from mallens.ingest.runner import build_class_graph
+from mallens.features.vectorize import extract_features
+from mallens.clustering.expand import rank_clusters
+from mallens.llm.client import LLMClient
+from mallens.llm.factsheet import (build_factsheet, feats_dict,FS_PROMPT_VERSION)
+from mallens.llm.pack import get_class_source
+from mallens.llm.fscache import FactSheetCache, src_hash
+from mallens.llm.pathfind import enumerate_paths
+from mallens.llm.adjudicate import adjudicate_path, render_path
+from mallens.llm.analyze import cluster_permission_lines
+from mallens.report.pathverdict import cluster_verdict, apk_verdict
+from mallens.core.datatypes import ApkPathVerdict
+from mallens.utils.cache import ArtifactCache, sha256_of_file
+from mallens.utils.logsetup import setup_logging
 
 # shadow arms
-from droidlens.report.llm_aggregate import llm_aggregate
-from droidlens.report.aggregate import aggregate as rule_aggregate
+from mallens.report.llm_aggregate import llm_aggregate
+from mallens.report.aggregate import aggregate as rule_aggregate
 
 
 # ----------------------------------------------------------------------------
@@ -190,7 +190,7 @@ def main() -> int:
             all_paths, all_pvs, cvs = {}, {}, {}
             n_raw = 0
 
-            from droidlens.features.api_taxonomy import ApiTaxonomy
+            from mallens.features.api_taxonomy import ApiTaxonomy
             tax = ApiTaxonomy.load(cfg.features.sensitive_api_csv)
             declared_perm = set(s1.apk.permissions)
             for cl in targets:
