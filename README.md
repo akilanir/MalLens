@@ -33,9 +33,8 @@ turns the cluster verdicts into a single APK-level verdict
   2. keep the line below (it will render automatically)
 -->
 
-![MalLens architecture diagram](docs/images/MalLensOverview.pdf)
+![MalLens architecture diagram](docs/images/MalLensOverview.png)
 
-> **Placeholder:** replace `docs/images/architecture.png` with the final diagram.
 
 The pipeline run by `scripts/06_llm_report.py` has five cache-aware stages:
 
