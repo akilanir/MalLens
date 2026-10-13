@@ -33,7 +33,7 @@ turns the cluster verdicts into a single APK-level verdict
   2. keep the line below (it will render automatically)
 -->
 
-![MalLens architecture diagram](docs/images/architecture.png)
+![MalLens architecture diagram](docs/images/MalLensOverview.pdf)
 
 > **Placeholder:** replace `docs/images/architecture.png` with the final diagram.
 
